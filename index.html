@@ -14,6 +14,48 @@
             text-align: center;
             margin-bottom: 10px;
         }
+
+        .progress-container {
+            background-color: #f5f6fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .progress-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .progress-stats {
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 0%;  /* This represents 3 out of 20 documents */
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 10px;
+            transition: width 0.5s ease-in-out;
+        }
         
         table {
             width: 100%;
@@ -87,6 +129,17 @@
 </head>
 <body>
     <h1>Italian Citizenship Document Checklist</h1>
+
+    <div class="progress-container">
+        <div class="progress-header">
+            <span class="progress-title">Document Collection Progress</span>
+            <span class="progress-stats">0 of 24 Documents Obtained</span>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+    
     <table>
         <thead>
             <tr>
@@ -103,7 +156,15 @@
                 <td>Jeffrey William Russo (you)</td>
                 <td>Aug. 14, 1989</td>
                 <td><span class="circle blue-circle"></span>Michigan</td>
+                <td><span class="circle yellow-circle"></span>Mexico¹</td>
+                <td><span class="circle black-circle"></span></td>
+                <td><span class="circle black-circle"></span></td>
+            </tr>
+            <tr>
+                <td>Zarina Odette Torres Ungson (Jeffrey's wife)</td>
+                <td>Mar. 2, 1991</td>
                 <td><span class="circle yellow-circle"></span>Mexico</td>
+                <td><span class="circle yellow-circle"></span>Mexico¹</td>
                 <td><span class="circle black-circle"></span></td>
                 <td><span class="circle black-circle"></span></td>
             </tr>
@@ -135,23 +196,23 @@
                 <td>William Michael Russo (father)</td>
                 <td>Oct. 10, 1960</td>
                 <td><span class="circle blue-circle"></span>Florida</td>
-                <td><span class="circle blue-circle"></span>Vermont¹<br><span class="circle yellow-circle"></span>Hawaii²</td>
+                <td><span class="circle blue-circle"></span>Vermont²<br><span class="circle yellow-circle"></span>Hawaii³</td>
                 <td><span class="circle black-circle"></span></td>
-                <td><span class="circle blue-circle"></span>Vermont</td>
+                <td><span class="circle blue-circle"></span>Vermont⁴</td>
             </tr>
             <tr>
                 <td>Susanne Rose Russo (mother)</td>
                 <td>Nov. 11, 1953</td>
                 <td><span class="circle blue-circle"></span>Michigan</td>
-                <td><span class="circle blue-circle"></span>Vermont¹</td>
+                <td><span class="circle blue-circle"></span>Vermont²</td>
                 <td><span class="circle black-circle"></span></td>
-                <td><span class="circle blue-circle"></span>Vermont</td>
+                <td><span class="circle blue-circle"></span>Vermont⁴</td>
             </tr>
             <tr>
                 <td>Julia Hsu Russo (step-mother)</td>
                 <td>-</td>
                 <td><span class="circle yellow-circle"></span>Taiwan</td>
-                <td><span class="circle yellow-circle"></span>Hawaii²</td>
+                <td><span class="circle yellow-circle"></span>Hawaii³</td>
                 <td><span class="circle black-circle"></span></td>
                 <td><span class="circle black-circle"></span></td>
             </tr>
@@ -168,7 +229,7 @@
                 <td>Sep. 5, 1921</td>
                 <td><span class="circle yellow-circle"></span>New York</td>
                 <td><span class="circle yellow-circle"></span>New York</td>
-                <td><span class="circle yellow-circle"></span>New York</td>
+                <td><span class="circle blue-circle"></span>New York</td>
                 <td><span class="circle black-circle"></span></td>
             </tr>
             <tr>
@@ -198,8 +259,10 @@
             <span class="circle black-circle"></span> Not applicable/not required
         </p>
         <div class="footnotes">
-            ¹ First marriage<br>
-            ² Second marriage
+            ¹ Marriage<br>
+            ² First marriage<br>
+            ³ Second marriage<br>
+            ⁴ Divorce
         </div>
     </div>
 </body>
