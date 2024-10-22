@@ -50,7 +50,7 @@
         }
 
         .progress-bar {
-            width: 0%;  /* This represents 3 out of 20 documents */
+            width: 12.5%;  /* This represents 3 out of 24 documents */
             height: 100%;
             background: linear-gradient(90deg, #3498db, #2980b9);
             border-radius: 10px;
@@ -94,6 +94,10 @@
             background-color: #2c3e50;
         }
         
+        .green-circle {
+            background-color: #2ecc71;
+        }
+        
         .legend {
             border: 1px solid #ddd;
             padding: 20px;
@@ -133,7 +137,7 @@
     <div class="progress-container">
         <div class="progress-header">
             <span class="progress-title">Document Collection Progress</span>
-            <span class="progress-stats">0 of 24 Documents Obtained</span>
+            <span class="progress-stats">3 of 24 Documents Obtained</span>
         </div>
         <div class="progress-bar-container">
             <div class="progress-bar"></div>
@@ -156,15 +160,15 @@
                 <td>Jeffrey William Russo (you)</td>
                 <td>Aug. 14, 1989</td>
                 <td><span class="circle blue-circle"></span>Michigan</td>
-                <td><span class="circle yellow-circle"></span>Mexico¹</td>
+                <td><span class="circle green-circle"></span>Mexico (Spanish)¹</td>
                 <td><span class="circle black-circle"></span></td>
                 <td><span class="circle black-circle"></span></td>
             </tr>
             <tr>
                 <td>Zarina Odette Torres Ungson (Jeffrey's wife)</td>
                 <td>Mar. 2, 1991</td>
-                <td><span class="circle yellow-circle"></span>Mexico</td>
-                <td><span class="circle yellow-circle"></span>Mexico¹</td>
+                <td><span class="circle green-circle"></span>Mexico (Spanish)</td>
+                <td><span class="circle green-circle"></span>Mexico (Spanish)¹</td>
                 <td><span class="circle black-circle"></span></td>
                 <td><span class="circle black-circle"></span></td>
             </tr>
@@ -187,7 +191,7 @@
             <tr>
                 <td>Annalisa May Russo (sister)</td>
                 <td>Aug. 14, 2017</td>
-                <td><span class="circle yellow-circle"></span>Taiwan</td>
+                <td><span class="circle green-circle"></span>Taiwan (English)</td>
                 <td><span class="circle black-circle"></span></td>
                 <td><span class="circle black-circle"></span></td>
                 <td><span class="circle black-circle"></span></td>
@@ -256,7 +260,8 @@
         <p>
             <span class="circle yellow-circle"></span> Required but not yet obtained<br>
             <span class="circle blue-circle"></span> Required and obtainable through VitalChek<br>
-            <span class="circle black-circle"></span> Not applicable/not required
+            <span class="circle black-circle"></span> Not applicable/not required<br>
+            <span class="circle green-circle"></span> Obtained
         </p>
         <div class="footnotes">
             ¹ Marriage<br>
